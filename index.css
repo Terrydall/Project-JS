@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#logoContainer {
+    cursor: pointer;
+    text-align: center;
+}
+
+#logoContainer img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#contactPage {
+    text-align: center;
+}
+
+#contactHeader {
+    color: red;
+    margin-bottom: 20px;
+}
+
+#contactHeader img {
+    max-width: 50%; /* Réduire la taille du logo */
+    max-height: 50%;
+}
+
+#addContactForm {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contactList,
+#contactCount {
+    display: none;
+}
+
+
+

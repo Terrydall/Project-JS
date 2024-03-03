@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="script.js"></script>
+    <title>Gestionnaire de Contacts</title>
+</head>
+<body>
+    <main>
+        <!-- Page principale -->
+        <section id="mainPage">
+            <div id="logoContainer" onclick="showContactPage()">
+                <img src="contact.png" alt="Logo">
+            </div>
+        </section>
+
+        <!-- Page des contacts -->
+        <section id="contactPage" style="display: none;">
+            <div id="contactHeader">
+                <h1>Gestionnaire de Contacts</h1>
+                <img src="contact.png" alt="Logo">
+            </div>
+            <div id="options">
+                <select id="contactOptions" onchange="handleContactOption()">
+                    <option value="add">Ajouter un contact</option>
+                    <option value="list">Lister les contacts</option>
+                    <option value="count">Voir le nombre de contacts</option>
+                </select>
+                <p>Choisir une option:</p>
+            </div>
+
+            <!-- Formulaire d'ajout de contact -->
+            <div id="addContactForm" style="display: none;">
+                <h2>Ajouter un contact</h2>
+                <form onsubmit="event.preventDefault(); addContactFromForm()">
+                    <label for="firstName">Prénom:</label>
+                    <input type="text" id="firstName" required>
+
+                    <label for="lastName">Nom:</label>
+                    <input type="text" id="lastName" required>
+
+                    <label for="phoneNumber">Numéro de téléphone:</label>
+                    <input type="text" id="phoneNumber" required>
+
+                    <button type="submit">Ajouter</button>
+                </form>
+            </div>
+
+            <!-- Liste des contacts -->
+            <div id="contactList">
+                <h2>Liste des Contacts</h2>
+                <!-- La liste des contacts sera affichée ici -->
+            </div>
+
+            <!-- Nombre de contacts -->
+            <div id="contactCount">
+                <h2>Nombre de Contacts</h2>
+                <!-- Le nombre de contacts sera affiché ici -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>
